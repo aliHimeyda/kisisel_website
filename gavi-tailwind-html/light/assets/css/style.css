@@ -179,20 +179,20 @@ body:before {
   transition: all 400ms linear;
 }
 .gallary-item:hover .branding {
-  background: #55e6a5;
+  background: #de6231; /* Koyu kahverengi */
   color: #000;
 }
 .gallary-item:hover .arrow {
-  color: #55e6a5;
-  fill: #55e6a5;
-  stroke: #55e6a5;
+  color: #de6231; /* Koyu kahverengi */
+  fill: #de6231; /* Koyu kahverengi */
+  stroke: #de6231; /* Koyu kahverengi */
 }
 .services .item:hover .bord-color {
   opacity: 1;
-  box-shadow: #55e6a5 500px;
+  box-shadow: #de6231 500px;
 }
 .bord-color {
-  box-shadow: 0px -40px 50px #55e6a5;
+  box-shadow: 0px -40px 50px#de6231; /* Koyu kahverengi */
 }
 .swiper-button-prev:after {
   display: none !important;
