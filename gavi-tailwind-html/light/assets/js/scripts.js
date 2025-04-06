@@ -404,6 +404,7 @@ $(function () {
     var effect = $(this).data("effect");
     var direction = $(this).data("direction");
     var mousewheel = $(this).data("mousewheel");
+    var index = 0;
 
     // Configuration
     var conf = {};
@@ -611,3 +612,25 @@ $(function () {
     });
   }
 });
+
+const prevbutonu = document.querySelector(".prev");
+const nextbutonu = document.querySelector(".next.ml-auto");
+const workresmi = document.querySelectorAll(".workresmi");
+prevbutonu.addEventListener("click", function () {
+  alert("Butona tıklandı!");
+});
+nextbutonu.addEventListener("click", function () {
+  alert("Butona tıklandı!");
+});
+workresmi.forEach((element, index) => {
+  element.addEventListener("click", function () {
+    alert;
+  });
+});
+const urunresimleriklasorleri = [
+  "assets/imgs/works/project1/",
+  "assets/imgs/works/project2/",
+  "assets/imgs/works/project3/",
+  "assets/imgs/works/project4/",
+  "assets/imgs/works/project5/",
+];
