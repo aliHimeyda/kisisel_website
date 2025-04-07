@@ -616,17 +616,16 @@ $(function () {
 const prevbutonu = document.querySelector(".prev");
 const nextbutonu = document.querySelector(".next.ml-auto");
 const workresmi = document.querySelectorAll(".workresmi");
-prevbutonu.addEventListener("click", function () {
-  alert("Butona tıklandı!");
-});
-nextbutonu.addEventListener("click", function () {
-  alert("Butona tıklandı!");
-});
-workresmi.forEach((element, index) => {
-  element.addEventListener("click", function () {
-    alert;
-  });
-});
+const anaresim = document.querySelector(".anaresim");
+const resim2 = document.querySelector(".resim2");
+const resim3 = document.querySelector(".resim3");
+var worknumarasi;
+if (localStorage.getItem("sayfanumarasi") != null) {
+  worknumarasi = localStorage.getItem("sayfanumarasi");
+} else {
+  worknumarasi = 0;
+}
+
 const urunresimleriklasorleri = [
   "assets/imgs/works/project1/",
   "assets/imgs/works/project2/",
@@ -634,3 +633,32 @@ const urunresimleriklasorleri = [
   "assets/imgs/works/project4/",
   "assets/imgs/works/project5/",
 ];
+workresmi.forEach((element, index) => {
+  element.addEventListener("click", function () {
+    worknumarasi = index;
+    localStorage.setItem("sayfanumarasi", worknumarasi);
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  alert(worknumarasi);
+  prevbutonu.addEventListener("click", function () {
+    worknumarasi--;
+    if (worknumarasi >= 0) {
+      localStorage.setItem("sayfanumarasi", worknumarasi);
+    } else {
+      localStorage.setItem("sayfanumarasi", 0);
+    }
+  });
+  nextbutonu.addEventListener("click", function () {
+    worknumarasi++;
+    if (worknumarasi <= 4) {
+      localStorage.setItem("sayfanumarasi", worknumarasi);
+    } else {
+      localStorage.setItem("sayfanumarasi", 4);
+    }
+  });
+
+  anaresim.src = urunresimleriklasorleri[worknumarasi] + "1.png";
+  resim2.src = urunresimleriklasorleri[worknumarasi] + "2.png";
+  resim3.src = urunresimleriklasorleri[worknumarasi] + "3.png";
+});
