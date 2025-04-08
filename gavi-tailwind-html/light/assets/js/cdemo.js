@@ -1,5 +1,5 @@
 /**
- * @author mrdoob / http://mrdoob.com/
+ * @author mrdoob 
  */
 
 THREE.SpriteCanvasMaterial = function (parameters) {

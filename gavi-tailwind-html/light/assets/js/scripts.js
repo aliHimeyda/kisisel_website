@@ -1,14 +1,3 @@
-/*-----------------------------------------------------------------------------------
-
-    Theme Name: Gavi
-    Theme URI: http://
-    Description: Creative Personal & Portfolio
-    Author: UI-ThemeZ
-    Author URI: http://themeforest.net/user/UI-ThemeZ
-    Version: 1.0
-
------------------------------------------------------------------------------------*/
-
 $(function () {
   "use strict";
 
@@ -619,20 +608,109 @@ const workresmi = document.querySelectorAll(".workresmi");
 const anaresim = document.querySelector(".anaresim");
 const resim2 = document.querySelector(".resim2");
 const resim3 = document.querySelector(".resim3");
+const projebaciklamalaridiv = document.querySelector(".cont.md-mb50");
+const projeyanozellikleri = document.querySelector("#sticky_item");
+
 var worknumarasi;
 if (localStorage.getItem("sayfanumarasi") != null) {
   worknumarasi = localStorage.getItem("sayfanumarasi");
 } else {
   worknumarasi = 0;
 }
+const proje = [
+  {
+    resmi: "assets/imgs/works/project1/",
+    basligi: "Flutter-Based File Manager Application",
+    ilkaciklama:
+      "This project is a file manager app developed with Flutter, focusing not only on file browsing but also on understanding the file system structure of Android devices.<br>It dives deep into the tree data structure and ensures efficient access to system resources through Flutter.<br>The app supports features like adding, deleting, searching, and navigating within the tree.<br>Users can manage and share files using various Flutter packages.<br>It also includes dark/light theme switching, deep cleaning algorithms, and permission control.<br>Shared Preferences and context/state management were utilized to enhance functionality.<br>Files can be shared through the system picker seamlessly.<br>The project helped strengthen my understanding of system-level mobile development and data structure implementation.<br>The user-friendly interface was a priority throughout the design process.<br>A great learning experience both technically and structurally.",
+    cekiciyazi:
+      "Not just a file browser—<br>it's a deep dive into mobile file systems!",
+    hevesyazisi:
+      "I built this app to turn my knowledge of tree data structures into practical implementation.<br>I aimed to understand how file management works at the system level in mobile devices.<br>Through this, I explored Flutter’s capability to interact with system resources effectively.<br>I focused on designing a clean and user-friendly interface.<br>The result was a highly functional and educational file manager app.",
+    projetarihi: "15.09.2024",
+    katagorisi: "Mobile App",
+    ulasimbilgisi: "github.com/aliHimeyda",
+    ozellikler: [
+      "Tree Structure",
+      "Theme Switch",
+      "File Sharing",
+      "System Access",
+    ],
+  },
+  {
+    resmi: "assets/imgs/works/project2/",
+    basligi: "Furniture Product Gallery Mobile App",
+    ilkaciklama:
+      "This mobile app was created to help showcase and promote furniture products for my father's business.<br>Users can filter and sort items by features, price, or popularity.<br>The app supports recently viewed and bookmarked items for smart recommendations.<br>Multilingual support in Turkish, Arabic, and English ensures accessibility for a diverse audience.<br>Category-based listing and WhatsApp integration allow for quick user communication.<br>Fast search and smooth navigation enhance user experience.<br>Throughout the project, I improved my knowledge of Flutter’s widget structure and gained hands-on experience with Dart.<br>I also learned how mobile apps operate on Android and implemented basic API calls.<br>This project strengthened both my UI/UX and technical abilities.<br>Thanks to Flutter, I created a scalable and polished mobile solution.",
+    cekiciyazi:
+      "Furniture meets Flutter!<br>Smart design and smooth experience in one app!",
+    hevesyazisi:
+      "I created this app to help my father’s business reach more customers online.<br>With filtering, sorting, and multilingual support, it’s tailored for accessibility.<br>The project also served as a great opportunity to apply and deepen my Flutter skills.<br>It improved my ability to build user-centric and technically sound applications.<br>Excited to develop more solutions like this in the future!",
+    projetarihi: "12.10.2024",
+    katagorisi: "Business App",
+    ulasimbilgisi: "github.com/aliHimeyda",
+    ozellikler: ["Multilingual", "Filtering", "WhatsApp Connect", "Smart UX"],
+  },
 
-const urunresimleriklasorleri = [
-  "assets/imgs/works/project1/",
-  "assets/imgs/works/project2/",
-  "assets/imgs/works/project3/",
-  "assets/imgs/works/project4/",
-  "assets/imgs/works/project5/",
+  {
+    resmi: "assets/imgs/works/project3/",
+    basligi: "Candy Crush Game with C# and Windows Forms",
+    ilkaciklama:
+      "This project is a fun and interactive Candy Crush-style game developed using C# and Windows Forms.<br>It was designed to reinforce object-oriented programming (OOP) concepts in a practical and engaging way.<br>The game features colorful candies, interactive gameplay, and score tracking mechanics.<br>Using C#, modular and reusable code structures were created through classes and objects.<br>The UI was developed with Windows Forms, making it smooth and responsive.<br>This project allowed me to deepen my understanding of event-driven programming and Windows-based UI logic.<br>Animations and dynamic behavior made the gameplay enjoyable and realistic.<br>I focused on keeping the design user-friendly and engaging.<br>The game structure is scalable for adding new features or levels.<br>This project boosted both my creativity and technical design skills.",
+    cekiciyazi:
+      "Sweet logic meets colorful fun!<br>Enjoy addictive gameplay while practicing OOP!",
+    hevesyazisi:
+      "I created this game to practice OOP principles through a fun and visual project.<br>Developing it helped me master Windows Forms and understand UI responsiveness.<br>It was exciting to implement mechanics like matching logic, animations, and score tracking.<br>The modular structure allows for future feature additions.<br>This project gave me hands-on experience in building interactive applications.",
+    projetarihi: "10.07.2024",
+    katagorisi: "Game Development",
+    ulasimbilgisi: "github.com/aliHimeyda",
+    ozellikler: [
+      "OOP Design",
+      "Windows Forms",
+      "Interactive UI",
+      "Colorful Gameplay",
+    ],
+  },
+  {
+    resmi: "assets/imgs/works/project4/",
+    basligi: "Interactive Pediatric Scheduling Web App",
+    ilkaciklama:
+      "This is a pediatric scheduling application developed using HTML, CSS, JavaScript, and React.<br>It allows for dynamically assigning pediatric assistants to different departments in a hospital.<br>The UI includes interactive pop-ups for assistant and faculty profiles, improving workflow transparency.<br>The design is fully responsive, providing smooth usability across devices.<br>Dedicated pages for hospital announcements and emergency alerts were also created.<br>Flexbox and modern CSS techniques were applied for layout and style consistency.<br>The project was part of my web technologies coursework, applying real-world solutions in healthcare management.<br>It was an excellent opportunity to master front-end development and UI design.<br>React’s component-based structure made it easier to build reusable, interactive features.<br>Through this project, I enhanced both my technical and problem-solving capabilities.",
+    cekiciyazi: "Efficient pediatric scheduling,<br>now just a click away!",
+    hevesyazisi:
+      "This project allowed me to solve a real-world problem using front-end technologies.<br>I gained hands-on experience with React, component-based design, and responsive layouts.<br>Managing pediatric assistant schedules became efficient and transparent.<br>It was a valuable learning journey in modern web development.<br>I’m proud to have built something meaningful and useful.",
+    projetarihi: "28.08.2024",
+    katagorisi: "Web Application",
+    ulasimbilgisi: "github.com/aliHimeyda",
+    ozellikler: [
+      "Responsive UI",
+      "React Components",
+      "Live Scheduling",
+      "Healthcare Focus",
+    ],
+  },
+  {
+    resmi: "assets/imgs/works/project5/",
+    basligi: "Folder Monitoring Service Running as a System Service",
+    ilkaciklama:
+      "This project is a directory monitoring application developed using Python and the Watchdog library, designed to run as a system service on Ubuntu Linux.<br>It continuously monitors specified directories 24/7 for events like folder creation, deletion, and file modifications.<br>Each detected change is saved in a .json file with its location and timestamp.<br>The JSON format allows for easy integration with external systems.<br>The service starts automatically when the system boots and runs in the background.<br>Its lightweight nature ensures minimal usage of system resources.<br>The modular structure makes it easily adaptable for monitoring different directories.<br>The code is structured for readability and further development.<br>It is designed to provide a secure and reliable service.<br>A powerful monitoring and logging solution for system administrators.",
+    cekiciyazi:
+      "Real-time file and folder tracking made easy!<br>Detect changes instantly, log them, and stay in control!",
+    hevesyazisi:
+      "If you want to instantly track file and folder changes on your system, this project is just for you!<br>It logs every change in detail into a .json file, allowing you to analyze the history.<br>As it runs as a service, it operates continuously in the background without needing manual intervention.<br>Its lightweight structure offers maximum efficiency without affecting system performance.<br>Thanks to its flexible and modular design, it can be easily integrated into various projects.",
+    projetarihi: "01.11.2024",
+    katagorisi: "System File",
+    ulasimbilgisi: "github.com/aliHimeyda",
+    ozellikler: ["Low resource", "Auto start", "JSON logging", "Real-time"],
+  },
 ];
+// const urunresimleriklasorleri = [
+//   "assets/imgs/works/project1/",
+//   "assets/imgs/works/project2/",
+//   "assets/imgs/works/project3/",
+//   "assets/imgs/works/project4/",
+//   "assets/imgs/works/project5/",
+// ];
 workresmi.forEach((element, index) => {
   element.addEventListener("click", function () {
     worknumarasi = index;
@@ -640,7 +718,6 @@ workresmi.forEach((element, index) => {
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
-  alert(worknumarasi);
   prevbutonu.addEventListener("click", function () {
     worknumarasi--;
     if (worknumarasi >= 0) {
@@ -658,7 +735,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  anaresim.src = urunresimleriklasorleri[worknumarasi] + "1.png";
-  resim2.src = urunresimleriklasorleri[worknumarasi] + "2.png";
-  resim3.src = urunresimleriklasorleri[worknumarasi] + "3.png";
+  // project detailes sayfasinin iceriginin ozellestirilmesi //
+
+  anaresim.src = proje[worknumarasi].resmi + "1.png";
+  resim2.src = proje[worknumarasi].resmi + "2.png";
+  resim3.src = proje[worknumarasi].resmi + "3.png";
+  projebaciklamalaridiv.children[0].textContent = proje[worknumarasi].basligi;
+  projebaciklamalaridiv.children[1].innerHTML = proje[worknumarasi].ilkaciklama;
+  projebaciklamalaridiv.children[2].innerHTML = "";
+  projebaciklamalaridiv.children[3].children[0].innerHTML =
+    proje[worknumarasi].cekiciyazi;
+  projebaciklamalaridiv.children[3].children[1].innerHTML =
+    proje[worknumarasi].hevesyazisi;
+  projebaciklamalaridiv.children[3].children[2].children[0].children[1].textContent =
+    proje[worknumarasi].ozellikler[0];
+  projebaciklamalaridiv.children[3].children[2].children[1].children[1].textContent =
+    proje[worknumarasi].ozellikler[1];
+  projebaciklamalaridiv.children[3].children[2].children[2].children[1].textContent =
+    proje[worknumarasi].ozellikler[2];
+  projebaciklamalaridiv.children[3].children[2].children[3].children[1].textContent =
+    proje[worknumarasi].ozellikler[3];
+  projeyanozellikleri.firstElementChild.children[0].children[1].textContent =
+    proje[worknumarasi].projetarihi;
+  projeyanozellikleri.firstElementChild.children[1].children[1].textContent =
+    proje[worknumarasi].katagorisi;
+  projeyanozellikleri.firstElementChild.children[3].children[1].textContent =
+    proje[worknumarasi].ulasimbilgisi;
 });

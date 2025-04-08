@@ -369,6 +369,74 @@
             </div>
           </div>
         </div>
+        <div class="comments-from">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="sec-head mb-[60px]">
+            <h5 class="text-[18px] md:text-[24px] font-[500]">
+              Leave a comment
+            </h5>
+          </div>
+          <form id="contact-form" method="post" action="contact.php">
+            <div class="messages"></div>
+
+            <div class="controls row grid grid-cols-2">
+              <div class="col-lg-6 col-span-1 px-[15px]">
+                <div class="form-group mb-[30px]">
+                  <input
+                    class="w-full border border-[#00000033] rounded-[5px] bg-transparent text-[#000] p-[15px] [transition:all_0.4s]"
+                    id="form_name"
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    required="required"
+                  />
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-span-1 px-[15px]">
+                <div class="form-group mb-[30px]">
+                  <input
+                    class="w-full border border-[#00000033] rounded-[5px] bg-transparent text-[#000] p-[15px] [transition:all_0.4s]"
+                    id="form_email"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required="required"
+                  />
+                </div>
+              </div>
+
+              <div class="col-12 col-span-2 px-[15px]">
+                <div class="form-group mb-[30px]">
+                  <textarea
+                    class="w-full border border-[#00000033] rounded-[5px] bg-transparent text-[#000] p-[15px] [transition:all_0.4s]"
+                    id="form_message"
+                    name="message"
+                    placeholder="Message"
+                    rows="4"
+                    required="required"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="mt-[20px] px-[15px] col-span-2">
+                <button
+                  class="px-[35px] w-full hover:text-light py-[15px] bg-transparent border border-[#444343] w-full tracking-widest text-[13px] relative overflow-hidden rounded-[5px] transtion-all duration-500 uppercase after:content-[''] after:absolute after:top-0 after:left-0 after:w-[5px] after:h-full after:bg-main2 after:transition-all duration-500 after:duration-500 hover:after:w-full"
+                  type="submit "
+                >
+                  <span class="text bg-transparent relative !z-10"
+                    >Post A Comment</span
+                  >
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
         <div class="next-prev">
           <div class="row flex justify-center">
             <div class="col-lg-11 w-[91.6661%]">
@@ -392,6 +460,8 @@
             </div>
           </div>
         </div>
+
+        
       </section>
 
       <!-- ==================== End project ==================== -->
