@@ -704,13 +704,6 @@ const proje = [
     ozellikler: ["Low resource", "Auto start", "JSON logging", "Real-time"],
   },
 ];
-// const urunresimleriklasorleri = [
-//   "assets/imgs/works/project1/",
-//   "assets/imgs/works/project2/",
-//   "assets/imgs/works/project3/",
-//   "assets/imgs/works/project4/",
-//   "assets/imgs/works/project5/",
-// ];
 workresmi.forEach((element, index) => {
   element.addEventListener("click", function () {
     worknumarasi = index;
@@ -761,4 +754,30 @@ document.addEventListener("DOMContentLoaded", function () {
     proje[worknumarasi].katagorisi;
   projeyanozellikleri.firstElementChild.children[3].children[1].textContent =
     proje[worknumarasi].ulasimbilgisi;
+});
+
+//00000000000000000000000000000000000000000000000000//
+//                eposta mesaj yonlendirme          //
+//00000000000000000000000000000000000000000000000000//
+const getamassage = document.querySelector("#form_button");
+const nameinput = document.querySelector("#form_name");
+const subjectinput = document.querySelector("#form_subject");
+const mesajinput = document.querySelector("#form_message");
+getamassage.addEventListener("click", function () {
+  const name = nameinput.value;
+  const msubject = subjectinput.value;
+  const mesaj = mesajinput.value;
+  try {
+    const to = "alihameda417@gmail.com";
+    const subject = msubject;
+    const body = `ben : ${name} ${mesaj}`;
+
+    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.open(gmailURL, "_blank");
+  } catch (error) {
+    alert("hata olustu");
+  }
 });
