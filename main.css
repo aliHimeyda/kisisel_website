@@ -897,6 +897,11 @@ video {
   margin-left: 20px;
   margin-right: 20px;
 }
+.mx-\[10px\] {
+  font-size: 40;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 .mx-\[2px\] {
   margin-left: 2px;
