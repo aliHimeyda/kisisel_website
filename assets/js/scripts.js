@@ -608,6 +608,8 @@ const workresmi = document.querySelectorAll(".workresmi");
 const anaresim = document.querySelector(".anaresim");
 const resim2 = document.querySelector(".resim2");
 const resim3 = document.querySelector(".resim3");
+const resim4 = document.querySelector(".resim4");
+const resim5 = document.querySelector(".resim5");
 const projebaciklamalaridiv = document.querySelector(".cont.md-mb50");
 const projeyanozellikleri = document.querySelector("#sticky_item");
 
@@ -733,6 +735,8 @@ document.addEventListener("DOMContentLoaded", function () {
   anaresim.src = proje[worknumarasi].resmi + "1.png";
   resim2.src = proje[worknumarasi].resmi + "2.png";
   resim3.src = proje[worknumarasi].resmi + "3.png";
+  resim5.src = proje[worknumarasi].resmi + "5.png";
+  resim4.src = proje[worknumarasi].resmi + "4.png";
   projebaciklamalaridiv.children[0].textContent = proje[worknumarasi].basligi;
   projebaciklamalaridiv.children[1].innerHTML = proje[worknumarasi].ilkaciklama;
   projebaciklamalaridiv.children[2].innerHTML = "";
