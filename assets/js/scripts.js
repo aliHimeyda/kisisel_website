@@ -712,6 +712,12 @@ workresmi.forEach((element, index) => {
     localStorage.setItem("sayfanumarasi", worknumarasi);
   });
 });
+
+const postamassage = document.querySelector("#form_button");
+const postaprojectmassage = document.querySelector("#project_form_button");
+const nameinput = document.querySelector("#form_name");
+const subjectinput = document.querySelector("#form_subject");
+const mesajinput = document.querySelector("#form_message");
 document.addEventListener("DOMContentLoaded", function () {
   prevbutonu.addEventListener("click", function () {
     worknumarasi--;
@@ -758,30 +764,31 @@ document.addEventListener("DOMContentLoaded", function () {
     proje[worknumarasi].katagorisi;
   projeyanozellikleri.firstElementChild.children[3].children[1].textContent =
     proje[worknumarasi].ulasimbilgisi;
+
+  postaprojectmassage.addEventListener("click", function () {
+    postmassage(proje[worknumarasi].basligi);
+  });
 });
 
 //00000000000000000000000000000000000000000000000000//
 //                eposta mesaj yonlendirme          //
 //00000000000000000000000000000000000000000000000000//
-const getamassage = document.querySelector("#form_button");
-const nameinput = document.querySelector("#form_name");
-const subjectinput = document.querySelector("#form_subject");
-const mesajinput = document.querySelector("#form_message");
-getamassage.addEventListener("click", function () {
+
+postamassage.addEventListener("click", function () {
+  postmassage(); // Butona tıklanınca fonksiyonu parametresiz çağır
+});
+function postmassage(projectname = "") {
   const name = nameinput.value;
   const msubject = subjectinput.value;
   const mesaj = mesajinput.value;
-  try {
-    const to = "alihameda417@gmail.com";
-    const subject = msubject;
-    const body = `ben : ${name} ${mesaj}`;
 
-    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+  const to = "alihameda417@gmail.com";
+  const subject = projectname == "" ? msubject : "Aboute " + projectname;
+  const body = `I am: ${name},${mesaj}`; // %0A = yeni satır
 
-    window.open(gmailURL, "_blank");
-  } catch (error) {
-    alert("hata olustu");
-  }
-});
+  const mailtoURL = `mailto:${to}?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailtoURL;
+}
