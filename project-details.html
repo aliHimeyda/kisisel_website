@@ -315,6 +315,19 @@
                         </span>
                         <h6 class="inline font-[400] text-[#000] text-[15px] md:text-[18px]">Amazing communication.</h6>
                       </li>
+                        <!-- Buton -->
+  <button class="btn" onclick="openModal()">View Live</button>
+
+  <!-- Modal -->
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <video controls>
+        <source id="videovalue" src="" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+    </div>
+  </div>
                     </ul>
                   </div>
                 </div>
