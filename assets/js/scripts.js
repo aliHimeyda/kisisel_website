@@ -643,7 +643,7 @@ const proje = [
       "This project deepened my expertise in cross-platform mobile development, Flutter state management, and third-party package integration.",
     projetarihi: "29.07.2025",
     katagorisi: "Finance App",
-    ulasimbilgisi: "github.com/aliHimeyda/pararoot",
+    ulasimbilgisi: "github.com/aliHimeyda",
     ozellikler: [
       "Income/Expense Tracking",
       "Future Transaction Reminders",
@@ -740,14 +740,6 @@ const proje = [
     ozellikler: ["Low resource", "Auto start", "JSON logging", "Real-time"],
   },
 ];
-const videos = [
-  "assets/imgs/works/project6/video.mp4",
-  "assets/imgs/works/project1/video.mp4",
-  "assets/imgs/works/project2/video.mp4",
-  "assets/imgs/works/project3/video.mp4",
-  "assets/imgs/works/project4/video.mp4",
-  "assets/imgs/works/project5/video.mp4",
-];
 workresmi.forEach((element, index) => {
   element.addEventListener("click", function () {
     worknumarasi = index;
@@ -760,7 +752,8 @@ const postaprojectmassage = document.querySelector("#project_form_button");
 const nameinput = document.querySelector("#form_name");
 const subjectinput = document.querySelector("#form_subject");
 const mesajinput = document.querySelector("#form_message");
-const videovalue = document.querySelector("#videovalue");
+const modal = document.querySelector(`#videoModal${Number(worknumarasi) + 1}`);
+console.log(`${Number(worknumarasi) + 1}`);
 document.addEventListener("DOMContentLoaded", function () {
   prevbutonu.addEventListener("click", function () {
     worknumarasi--;
@@ -786,8 +779,6 @@ document.addEventListener("DOMContentLoaded", function () {
   resim3.src = proje[worknumarasi].resmi + "3.png";
   resim5.src = proje[worknumarasi].resmi + "5.png";
   resim4.src = proje[worknumarasi].resmi + "4.png";
-  videovalue.src = videos[worknumarasi];
-  console.log(videovalue.src);
   projebaciklamalaridiv.children[0].textContent = proje[worknumarasi].basligi;
   projebaciklamalaridiv.children[1].innerHTML = proje[worknumarasi].ilkaciklama;
   projebaciklamalaridiv.children[2].innerHTML = "";
@@ -839,19 +830,16 @@ function postmassage(projectname = "") {
 }
 
 function openModal() {
-  console.log(videovalue.src);
-  document.getElementById("videoModal").style.display = "block";
+  modal.style.display = "block";
 }
 
 function closeModal() {
-  var modal = document.getElementById("videoModal");
   modal.style.display = "none";
   modal.querySelector("video").pause(); // videoyu durdur
 }
 
 // Modal dışında tıklanırsa kapat
 window.onclick = function (event) {
-  var modal = document.getElementById("videoModal");
   if (event.target === modal) {
     closeModal();
   }
