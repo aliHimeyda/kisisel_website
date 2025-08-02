@@ -620,40 +620,7 @@ if (localStorage.getItem("sayfanumarasi") != null) {
   worknumarasi = 0;
 }
 const proje = [
-  {
-    resmi: "assets/imgs/works/project6/",
-    basligi: "ParaRoot - Flutter-Based Expense & Income Tracker",
-    ilkaciklama:
-      "ParaRoot is a comprehensive mobile application developed with Flutter to track, analyze, and manage personal finances effectively.<br>" +
-      "It allows users to add income and expense records, set future alarms for expected transactions, and receive timely reminders using the <b>flutter_local_notifications</b> package.<br>" +
-      "The app features real-time graphical analysis with charts for the last 30 days, including exchange rate tracking (USD, EUR, gold, silver), which is powered by the <b>http</b> or <b>dio</b> package for API integration.<br>" +
-      "Advanced data visualization is handled using the <b>fl_chart</b> package, offering intuitive and dynamic graphs.<br>" +
-      "Users can export detailed reports and summaries as PDF files through the <b>pdf</b> and <b>printing</b> packages, enhancing accessibility and documentation.<br>" +
-      "Persistent data storage is implemented with <b>shared_preferences</b> for lightweight needs, and optionally <b>hive</b> or <b>sqflite</b> for structured local databases.<br>" +
-      "File operations and path access are efficiently managed using the <b>path_provider</b> package.<br>" +
-      "For localization and date formatting, the app relies on the <b>intl</b> package.<br>" +
-      "The app also supports system-wide dark/light theme switching for better user experience.<br>" +
-      "The result is a reliable, elegant, and practical app that turns daily finance tracking into a visually enriched and structurally sound experience.",
-    cekiciyazi:
-      "Not just a tracker—<br>it's a financial companion with smart alerts and insights!",
-    hevesyazisi:
-      "I developed ParaRoot to address the real-world need for organized financial management.<br>" +
-      "My goal was to integrate real-time exchange rates and automated reminders with an easy-to-use interface.<br>" +
-      "Throughout the development, I focused on UI/UX, data visualization, and notification systems.<br>" +
-      "This project deepened my expertise in cross-platform mobile development, Flutter state management, and third-party package integration.",
-    projetarihi: "29.07.2025",
-    katagorisi: "Finance App",
-    ulasimbilgisi: "github.com/aliHimeyda",
-    ozellikler: [
-      "Income/Expense Tracking",
-      "Future Transaction Reminders",
-      "PDF Export & Report Generation",
-      "Live Exchange Rates (USD, EUR, Gold, Silver)",
-      "Chart-Based Analysis",
-      "Dark/Light Theme Support",
-      "Flutter Notifications",
-    ],
-  },
+  
   {
     resmi: "assets/imgs/works/project1/",
     basligi: "Flutter-Based File Manager Application",
